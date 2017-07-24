@@ -15,7 +15,7 @@ return call_user_func(function()
         ->setLazy(true);
 
     // Configure routes
-    $magentoV1Routes->get('/', 'index');
+    $magentoV1Routes->post('/sales_order_shipment.create', 'sales_order_shipment_create');
 
     // Finished
     return $magentoV1Routes;

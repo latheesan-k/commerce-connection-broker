@@ -59,7 +59,7 @@ class Helper
         }
 
         // Parse error message
-        $errorMessage = $exception->getMessage();
+        $errorMessage = trim($exception->getMessage());
         if (self::getDI('config')->app->debug) {
             $errorMessage .= ' @ ' . basename($exception->getFile()) . ':' . $exception->getLine();
         }
